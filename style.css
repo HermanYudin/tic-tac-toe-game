@@ -1,0 +1,123 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+body{
+    background-color: cadetblue;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.blackout{
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+    background-color: black;
+    top:0;
+    display: none;
+    position: absolute;
+}
+
+.modal-container{
+    width: 100%;
+    height: 100%;
+    top:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal{
+    position: absolute;
+    width:300px;
+    height:300px;
+    background-color: #FFE4B5;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border:2px solid cadetblue;
+    display: none;
+    top:30%;
+    animation-duration: 0.55s;
+    animation-fill-mode: both;
+    animation-name: fadeInDown;
+}
+
+.modal-title{
+    color:darkslateblue;
+}
+
+.modal-button{
+    width:180px;
+    height:35px;
+    background-color: cadetblue;
+    margin-top:50px;
+    color:#FFE4B5;
+    outline: none;
+    border:1px solid darkslateblue;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    font-size: 25px;
+}
+
+.modal-button:hover{
+    background-color: darkslateblue;
+}
+
+.game{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top:70px;
+}
+
+.game-title{
+    margin-bottom:50px;
+    color:  #FFE4B5;
+}
+
+.game-container{
+    width:450px;
+    height:450px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box{
+    display: flex;
+    width: 150px;
+    height:150px;
+    background-color: darkslateblue;
+    border:0.5px solid #FFE4B5;
+    color: #FFE4B5;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.block{
+    display: block;
+}
+
+.flex{
+    display: flex;
+}
+
+@keyframes fadeInDown { 
+    0% {
+        opacity: 0;
+        transform: translate3d(0px, -100%, 0px);
+    }
+    100% {
+        opacity: 1;
+        transform: none;
+    }
+}
